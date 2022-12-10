@@ -1,0 +1,46 @@
+.l-container {
+  width: 100vw;
+  height: 100vh;
+}
+.l-board {
+  border: 4px solid black;
+  border-radius: 4px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  grid-template-rows: repeat(9, auto);
+  column-gap: 1px;
+  row-gap: 1px;
+  background-color: black;
+
+  .l-cell:nth-child(3n):not(:nth-child(9n)) {
+    margin-right: 2px;
+  }
+  .l-cell:nth-child(27n + 28),
+  .l-cell:nth-child(27n + 29),
+  .l-cell:nth-child(27n + 30),
+  .l-cell:nth-child(27n + 31),
+  .l-cell:nth-child(27n + 32),
+  .l-cell:nth-child(27n + 33),
+  .l-cell:nth-child(27n + 34),
+  .l-cell:nth-child(27n + 35),
+  .l-cell:nth-child(27n + 36) {
+    margin-top: 2px;
+  }
+}
+
+.l-cell {
+  border: 1px solid black;
+  background: white;
+  border-radius: 2px;
+}
+.l-cell:hover {
+  background: rgb(214, 233, 240);
+}
+
+.l-invalid-cell {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  font-weight: bolder;
+}
